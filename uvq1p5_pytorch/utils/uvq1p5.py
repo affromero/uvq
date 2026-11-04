@@ -20,7 +20,6 @@ limitations under the License.
 """
 
 import os
-import sys
 from typing import Any
 
 import torch
@@ -31,14 +30,7 @@ from . import aggregationnet
 from . import contentnet
 from . import distortionnet
 
-sys.path.append(
-    os.path.abspath(
-        os.path.join(
-            os.path.dirname(os.path.abspath(__file__)), '..', '..', 'utils'
-        )
-    )
-)
-import video_reader
+from google_uvq.utils import video_reader
 
 
 class UVQ1p5Core(nn.Module):
